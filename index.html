@@ -3,19 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
+    <title>MY WEBPAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .topbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 5px;
+            background-color: bisque;
+            height: 30px;
+        }
+        .topbarleft{
+            font-size: 30px;
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+           
+        }
+        .menu{
+            margin-left: 30px;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            
+        }
+        .container{
+            display: flex;
+            padding: 10px;
+
+        }
+        .profilebox{
+            width: 300px;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .profilebox img{
+            width: 200px;
+            border-radius: 100%;
+        }
+        .profilebox h2{
+            margin: 15px 0 5px;
+        }
+        .profilebox p{
+            color: black;
+            margin-bottom: 20px;
+        }
+        .rytside{
+            margin-left: 100px;
+            max-width: 500px;
+        }
+        .rytside h1{
+            font-size: 60px;
+            margin-bottom: 10px;
+
+        }
+        .rytside p{
+            line-height: 1.6;
+            color: black;
+            font-size: x-large;
+        }
+        .icon{
+            margin: 0 8px;
+            font-size: 16px;
+
+        }
+        .btn{
+            color: black;
+            padding: 10px 22px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .btnoutline{
+            border: 1px black;
+            padding: 10px 22px;
+            border-radius: 30px;
+            background: transparent;
+            cursor: pointer;
+        }
+        .bottom{
+            display: flex;
+
+            padding: 10px;
+            font-size: 14px;
+            background-color: bisque;
+            
+        }
+    </style>
 </head>
-<body>
-    <h1 style="text-align: center;">MY WEBPAGE</h1>
-    <div>
-<h2>Name: Jaya shree</h2>
-<h2>Email:jayashreeangappan1705@gmail.com</h2>
-<h2>City: Tirupur</h2>
-<hr>
-    </div>
-    <div>
-        <h2>Introduction myself</h2>
-        I'm Jayashree! As a fresher, I'm excited to share my knowledge and skills. I'm passionate about problem-solving and thrive in team environments. I'm eager to work hard, learn, and grow. I'm looking forward to being a trailblazer in my field and making a positive impact.
-    </div>
+<body style="background-color: lightsalmon;">
+    <header>
+        <div class="topbar">
+            <div class="topbarleft">
+                <h3>Personal Details</h3>
+            </div>
+            <div class="menu">
+                <a href="https://www.linkedin.com/in/jayashree1705">Linkedin</a>
+                <a href="https://github.com/settings/profile">github</a>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="profilebox">
+                <img src="./asset/img/pic1.jpeg">
+                <h2>Jayashree</h2>
+                
+            </div>
+            <div class="rytside">
+                <h1>Hello</h1>
+                <button class="btn">About me</button>
+                <button class="btn outline">Projects</button>
+                <p style="margin-top: 10px;">"Hi, I'm Jayashree! As a fresher, I'm excited to share my knowledge and skills. I'm passionate about problem-solving and thrive in team environments. I'm eager to work hard, learn, and grow. I'm looking forward to being a trailblazer in my field and making a positive impact.</p>
+            </div>
+            </div>
+    </main>
+    <section>
+        <div class="bottom">
+            <div>
+                @ 2025 Jayashree
+            </div>
+            <div>CALL: 9865877380</div>
+            <div>
+                Email:jayashreeangappan1705@gmail.com
+            </div>
+
+        </div>
+    </section>
+ 
 </body>
 </html>
