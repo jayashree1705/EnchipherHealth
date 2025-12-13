@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        .inlineelement p{
+            display: inline;
+            width: 50px;
+            height: 50px;
+        }
+        .inlineelement span{
+            background-color: aqua;
+        }
+        .block{
+            display: block;
+            width: 50%;
+            height: 200%;
+            background-color: aqua;
+        }
+        .block span{
+            background-color:beige;
+            color: black;
+        }
+        .Inline-block{
+            display: inline-block;
+            width: 10%;
+            height: 50%;
+           
+        }
+        .Hidden p{
+            display: none;
+        }
+        .visibility{
+            visibility: hidden;
+        }
+        .inlinetoblock span{
+            display: block;
+            background-color: lightskyblue;
+            height: 100px;
 
+
+        }
+        .BtoInline {
+            display: inline-block;
+            background-color: pink;
+            height: 100px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>INLINE</h1>
+    <main class="inlineelement">
+    <p> This is <span>Inline text</span></p>
+    <p>This is another <span>inline element</span></p>
+    </main>
+    <hr>
+    <section class="block">
+        <h1>Block</h1>
+        <p>This is the <span>famous</span> book materials</p>
+        <p> india is a <span>big country</span></p>
+    </section>
+    <hr>
+    <section class="Inline-block">
+        <h1>Inline-block</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur repudiandae recusandae eius, minima autem ut sed aliquam debitis, eos possimus assumenda sequi quos amet modi accusantium minus labore, corrupti error!</p>
+    </section>
+    <hr>
+    <h1>Hidden</h1>
+    <section class="Hidden">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis minima tempore eos harum laudantium dolor reprehenderit suscipit impedit facere quos odio nisi, ut atque cumque laborum molestias vitae! Eos, vitae?</p>
+    </section>
+    <hr>
+    <h1>Hidden visibility</h1>
+    <section class="visibility">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, repellat doloribus quibusdam doloremque perspiciatis hic pariatur cum mollitia, impedit natus, recusandae et dolorum repudiandae autem at eius distinctio soluta eaque!</p>
+
+    </section>
+    <hr>
+    <h1>inline to block</h1>
+    <section class="inlinetoblock">
+        <p>Lorem ipsum <span> dolor sit amet consectetur adipisicing elit</span>. Ab expedita sed, repellendus possimus laboriosam magnam iusto veritatis nisi impedit magni rerum, numquam blanditiis necessitatibus mollitia iure. Cumque minima dolores repellendus.</p>
+    </section>
+    <hr>
+    <h1>block to inline-block</h1>
+    <div class="BtoInline">
+        box 1
+    </div>
+    <div class="BtoInline">
+        box 2
+
+    </div>
+</body>
+</html>
