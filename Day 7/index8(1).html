@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Gallery</title>
+  <style>
+    .top{
+      background-color:palevioletred;
+      text-align: center;
+      padding: 10px;
+    }
+    .topbar{
+      padding: 10px;
+      text-align: center;
+      background-color: bisque;
+    }   
+  </style>
+</head>
+<body style="background-color: darkgray;">
+  <header class="top">
+    <h1>Video Gallery</h1>
+    <p>Good sounds video with clear audio</p>
+  </header>
+  <main>
+    <nav class="topbar">
+        <a href="#home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Contact">Contact</a>
+        <a href="#Categories">Categories</a>
+    </nav>
+    <section>
+    <div style="display: flex;gap: 150px;align-items: flex-start; padding: 10px; background-color: bisque;">
+      <article>
+        <h3>Sample Video 1</h3>
+        <video controls>
+          <source src="sample1.mp4" type="video/mp4">
+        </video>
+      </article>
+      <article>
+        <h3>Sample Video 2</h3>
+        <video controls>
+          <source src="sample2.mp4" type="video/mp4">
+        </video>
+      </article>
+      <article>
+        <h3>Sample Video 3</h3>
+        <video controls>
+          <source src="sample3.mp4" type="video/mp4">
+        </video>
+      </article>
+      </div>
+    </section>
+  </main>
+  <footer style="background-color:palevioletred; padding: 10px; text-align:center; color:black;">
+    © 2025 Nature and Design- All Rights Reserved
+    </footer>
+</body>
+</html>
+
