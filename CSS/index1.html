@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div>h2{
+        background-color: aqua;
+        border: 1px solid black;
+        text-align: center;
+    }
+    .b1 p{
+        background-color: blueviolet;
+        border-radius: 1px solid black;
+    }
+    .b2+p{
+        background-color: aqua;
+    }
+    .h1, .p{
+        background-color: bisque;
+    }
+    p ~ ul{
+        background-color: aquamarine;
+    }
+    
+</style>
+<body>
+    <h1 style="text-align: center;">Combinators</h1>
+    <div>
+        <h1>Child</h1>
+        <h2>This is my webpage</h2>
+        <h3>This is not my webpage</h3>
+        <h2>This is my webpage 2</h2>
+    </div>
+    <hr>
+    <div class="b1">
+        <h1>Descendant</h1>
+        <p>Class 1</p>
+        <p>Class 2</p>
+        <p>Class 3</p>
+    </div>
+    <p>Class 4</p>
+    <hr>
+    <div class="b2">
+        <h1>Next-sibling</h1>
+        <p>This is book</p>
+    </div>
+    <p>This is my Second book</p>
+    <hr>
+    <div>
+        <h1 class="h1">Selector list</h1>
+        <h4>classes</h4>
+        <p class="p">Class 1</p>
+        <p class="p">Class 2</p>
+        <p class="p">Class 3</p>
+    </div>
+    <hr>
+        <h1>Subsequent sibling</h1>
+            <p>This is my list</p>
+        <ul>
+            <li>Day 1</li>
+            <li>Day 2</li>
+        </ul>
+        <hr>
+</body>
+</html>
