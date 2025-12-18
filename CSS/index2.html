@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pesudoclass and elements</title>
+    <style>
+        .top{
+            display: flex;
+            justify-content: space-between;
+            background-color: darkgreen;
+            color: white;
+            padding: 20px;
+        }
+        .nav a{
+            color: white;
+            padding: 10px;
+            font-size:30px
+        }
+        a:link{
+            color: white;
+            text-decoration: none;
+        }
+        a:visited{
+            color: yellowgreen;
+        }
+        a:hover{
+            background-color: rgb(129, 228, 129);
+        }
+        a:active{
+            background-color: rgb(0, 40, 0);
+        }
+        .nav1 a{
+            font-size:20px;
+            margin: 10px;
+        }
+        .top2{
+            background-color: rgb(42, 151, 42);
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+            height:900px;
+        }
+        .top2::first-letter{
+            color: white;
+        }
+        .top3{
+            display: flex;
+            justify-content: space-between;
+            border-radius: 30px;
+            height: -200px;
+
+        }
+            .c1{
+                background-color: lawngreen;
+                justify-content: space-evenly;
+                width: 50%;
+                margin-top: 35px;
+                margin-left: 30px;
+                padding: 50px;
+                border-radius: 30px;
+                
+            }
+            .c2 {
+                background-color: lawngreen;
+                justify-content: space-evenly;
+                width: 30%;
+                margin-top: 50px;
+                margin-right: 30px;
+                border-radius: 30px;
+            }
+            .box{
+                width: 200px;
+                height: 100px;
+                background-color: rgb(4, 54, 4);
+                color: white;
+                font-size: 30px;
+                border: transparent;
+                border-radius: 30px;
+            }
+            .c1>p{
+                font-size: 30px;
+            }
+            .box:hover{
+                cursor: pointer;
+                background-color: lightgreen;
+            }
+            .c2>p{
+                background-color: black;
+                color: white;
+                padding: 30px;
+                margin-top: -20px;
+                border-radius: 30px 30px 0px 0px;
+            }
+            .sub1{
+                background-color: black;
+                border-radius: 10px;
+                text-align: center;
+                padding: 20px;
+                width: 40px;
+                margin-left: 20px;
+                color: white;
+            }
+            .c3{
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .c4{
+                display: flex;
+                justify-content: space-evenly;
+                margin: 10px;
+            }
+           
+    </style>
+</head>
+<body style="background-color:springgreen;font-family: sans-serif;">
+    <div class="top">
+        <div class="nav">
+        <a href="https://www.adobe.com/">ADOBE</a>
+        </div>
+        <div class="nav1">
+        <a href="#">Creativity & Design</a>
+        <a href="#">PDF & E-signature</a>
+        <a href="#">Marketing & Commerce</a>
+        <a href="#">Learn & Support</a>
+    </div>
+    </div>
+    <div class="top2">
+    <h1><b style="font-size:80px;">E</b>verything You need to make anything.</h1>
+    <p>Bring any idea to life with products for creators, businesses, and beyond.</p>
+    <input type="button" value="See all plans" style="text-align: center;background-color: rgb(4, 54, 4);color: white; padding: 25px; font-size: 20px;border-radius: 30px; border:transparent;">
+    <div class="top3">
+     <div class="c1">
+        <p style="background-color: darkgreen; padding: 20px;"><b>Meet the new Acrobat Studio</b></p>
+        <p>Insights,Content creation and trusted PDF tools in one place</p>
+        <p><input type="submit" value="Learn More" class="box"></p>
+        </div>
+        <div class="c2">
+            <p>Adobe Systems</p>
+        <div>
+            <div class="c3">
+            <div class="sub1">Ps</div>
+            <div class="sub1">Ai</div>
+            <div class="sub1">Ae</div>
+            </div>
+            <div class="c4">
+            <div class="sub1">Id</div>
+            <div class="sub1">Lr</div>
+            <div class="sub1">Pr</div>
+            </div>
+            </div>
+            <div>
+            <p><input type="submit" value="Explore More" class="box"></p>
+        </div>
+        </div>
+        </div>
+</div>
+ <footer style="background-color: darkgreen;">
+            <p style="padding: 20px; text-align: center; font-size: 25px; margin-top: 0px;"><b>ALL RIGHTS ARE RESERVED</b></p>
+        </footer>
+    
+</body>
+</html>
