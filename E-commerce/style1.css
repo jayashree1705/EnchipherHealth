@@ -1,0 +1,150 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(62, 6, 6);
+}
+.section1{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+} 
+.top{
+    max-width: 1300px;
+    margin: auto;
+    background-image: url(https://lepure.in/cdn/shop/files/3200_by_1200.png?v=1763998354&width=2000);
+    height: 500px;
+    position: relative;
+
+}
+.bar{
+    margin-left: 40px;
+}
+.icons{
+    display: flex;
+    text-align: center;
+    color: white;
+}
+.icon{
+    margin-right: 50px;
+}
+.icon:hover{
+    color: grey;
+}
+.nav{
+    align-items: center;
+    text-align:center;
+}
+.nav ul,li,a{
+    display:flex;
+    list-style-type: none;
+    margin-right: 20px;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+.BAR{
+    color: #ffffff;
+    padding-top: 200px;
+    padding-left: 50px;
+}
+.card{
+    position: relative;
+    width:fit-content;
+}
+.hoverimg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: opacity 0.3s ease-in-out;
+}
+.card:hover .hoverimg{
+opacity: 1;
+}
+.card-body{
+    background-color:rgb(202, 191, 191);
+    text-align: center;
+}
+.col{
+    font-size: 20px;
+    text-align: center;
+}
+.row{
+    padding: 100px;
+    gap: 5%;
+    cursor: pointer;
+}
+.footer{
+    margin-top: 30px;
+    display: flex;
+     justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto;
+}
+.column{
+    display: flex;
+    padding: 10px;
+}
+.column a{
+    text-decoration: none;
+    color: grey;
+}
+.ic1{
+    display: grid;
+    padding: 30px;
+    color: rgb(54, 53, 53);
+    font-size: 30px;
+}
+.ic2 p{
+    text-align: left;
+    color: black;
+    font-size: 30px;
+}
+.ic2 a,ul{
+    text-align: center;
+    list-style-type: none;
+    color: grey;
+}
+.ic3{
+    color: black;
+    font-size: 30px;
+}
+.ic4{
+    color: grey;
+}
+.mail{
+    padding-top: 68px;
+}
+.image{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.ic5 h1{
+     display: grid;
+    padding: 30px;
+    color: rgb(54, 53, 53);
+    font-size: 30px;
+    margin-left: 50px;
+
+}
+.ic5 p{
+    color: black;
+    margin-left: 80px;
+}
+.view3 a{
+    padding: 10px;
+    background-color: brown;
+    border-radius: 30px;
+    width: 200px;
+     margin-left: 80px;
+     justify-content: center;
+     color: white;
+}
+.bottom{
+    color: gray;
+    text-align: center;
+}
