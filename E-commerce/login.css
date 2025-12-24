@@ -1,0 +1,164 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.section1{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #2d0000;
+} 
+.top{
+    margin: auto;
+    height: 800px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-image:url(https://lepure.in/cdn/shop/files/CorporateBanner_2.png?v=1749816055&width=1800) ;
+}
+.bar{
+    
+    margin-left: 40px;
+}
+.icons{
+    display: flex;
+    text-align: center;
+    color: white;
+}
+.icon{
+    margin-right: 50px;
+}
+.icon:hover{
+    color: grey;
+}
+.nav{
+    align-items: center;
+    text-align:center;
+}
+.nav ul,li,a{
+    display:flex;
+    list-style-type: none;
+    margin-right: 20px;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+.content10{
+    text-align: center;
+    background-image: url();
+    background-size: cover;
+    width: 100%;
+    padding: 50px;
+    color: white;
+}
+.x1{
+    width: 600px;
+    text-align: left;
+    margin-left:300px;
+    padding: 20px;
+}
+.x2{
+        display: flex;
+        justify-content: space-around;
+        margin-left: -25px;
+    }
+.x3{
+    padding: 10px;
+    font-size: larger;
+}
+.x4{
+    padding: 5px;
+    width: 210px;
+    margin-top: 10px;
+}
+.x5{
+    padding: 5px;
+    width: 510px;
+    margin-top: 10px;
+}
+.but2{
+    padding: 5px;
+    background-color:rgb(75, 18, 18);
+    color:white;
+    border-radius: 30px;
+    border: transparent;
+    cursor: pointer;
+    width: 150px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.footer{
+    margin-top: 60px;
+    display: flex;
+     justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto;
+
+}
+.column{
+    display: flex;
+    padding: 10px;
+}
+.column a{
+    text-decoration: none;
+    color: grey;
+}
+.ic1{
+    display: grid;
+    padding: 30px;
+    color: rgb(54, 53, 53);
+    font-size: 30px;
+}
+.ic2 p{
+    text-align: left;
+    color: black;
+    font-size: 30px;
+}
+.ic2 a,ul{
+    text-align: center;
+    list-style-type: none;
+    color: grey;
+}
+.ic3{
+    color: black;
+    font-size: 30px;
+}
+.ic4{
+    color: grey;
+}
+.mail{
+    padding-top: 68px;
+}
+.image{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.ic5 h1{
+     display: grid;
+    padding: 30px;
+    color: rgb(54, 53, 53);
+    font-size: 30px;
+    margin-left: 50px;
+
+}
+.ic5 p{
+    color: black;
+    margin-left: 80px;
+}
+.view3 a{
+    padding: 10px;
+    background-color: brown;
+    border-radius: 30px;
+    width: 200px;
+     margin-left: 80px;
+     justify-content: center;
+     color: white;
+}
+.bottom{
+    color: gray;
+    text-align: center;
+}
