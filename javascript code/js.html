@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.Welcome msg
+        // let hour=prompt("enter hour");
+        // if(hour<12){
+        //     alert("good morning");
+        // }else if(hour<18){
+        //     alert("good Afternoon");
+        // }
+        // else{
+        //  alert("good evening");
+
+        // }
+        // 2.positive,negative
+        // let num=Number(prompt("Enter num"))
+        // if(num>0){
+        //     alert("positive")
+        // }else if(num<0){
+        //     alert("negative");
+        // } else{
+        //     alert("zero");
+        // }
+
+        // 3.attendence checker
+        // let total=Number(prompt("total class"))
+        // let attended=Number(prompt("attended class"))
+        // if((attended/total)*100 >=75){
+        //     alert("eligible")
+        // }else{
+        //     alert(" not eligible")
+
+        // }
+        // 4.largest number
+        // let limit=Number(prompt("enter limit"));
+        // let largest=0;
+        // for(let i=1;i<=limit;i++){
+        //     let n=Number(prompt("enter n"+i));
+        //     if(i===1||n>largest){
+        //         largest=n;
+        //     }
+        // }
+        // alert(largest);
+        // 5.temp convertor
+        // let choose=prompt("cel or fran");
+        // let temp=Number(prompt("enter temp"));
+        // function change(){
+        //     if(choose==="cel"){
+        //         alert((temp*9/5)+32);
+        //     }
+        //     else{
+        //         alert((temp-32)*5/9);
+    
+        //     }
+        // }
+        // change();
+
+        // 6. count vowels in string
+        // let string=prompt("enter string");
+        // let count=0;
+        // for(let i=0;i<string.length;i++){
+        //     let ch=string[i];
+        //     if(ch=='a'|| ch=='e'||ch=='i'||ch=='o'||ch=='u'||
+        //         ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U' ){
+        //             count++;
+        //         }
+        // }
+        // alert(count);
+
+        // 7.number pattern
+        // let num=Number(prompt("enter num"));
+        // for(let i=1;i<=num;i++){
+        //     let row="";
+        //     for(let j=1;j<=i;j++){
+        //      row+=i;
+        // }
+        // console.log(row);
+        // }
+
+        // 8.smallest number
+        // let a=Number(prompt("enter a"));
+        // let b=Number(prompt("enter b"));
+        // let c=Number(prompt("enter c"));
+        // if(a<=b && a<=c){
+        //     alert(a);
+        // }
+        // else if(b<=c && b<=a){
+        //     alert(b);
+        // }
+        // else{
+        //     alert(c);
+        // }
+
+        // 9.bill amount
+        // let items=Number(prompt("enter items"));
+        // let peritem=Number(prompt("enter peritem"));
+        //    total= peritem*items;
+        // alert(total)
+        // 10.leap year
+        // let year=Number(prompt("enter year"));
+        // if(year%4===0&& year%100!=0|| year%400===0){
+        //     alert("leap year");
+        // }
+        // else{
+        //     alert("not leap year");
+        // }
+
+        // 11.odd count
+        //  let limit=Number(prompt("enter limit"));
+        //  let count=0;
+        //  for(let i=1;i<=limit;i++){
+        //     if(i%2!=0){
+        //         count++;
+        //     }
+        //  }
+        //  alert(count)
+
+        // 12.palindrome
+        //  let num1=prompt("num1");
+        //  let num2="";
+        //  function palindrome(num1,num2){
+        //     for(let i=num1.length-1;i>=0;i--){
+        //         num2+=num1[i];
+        //     }
+        //     if(num1==num2){
+        //         alert("palindrome");
+        //     }else{
+        //         alert("not palindrome")
+        //     }
+        //  }
+        //  palindrome(num1,num2)
+
+
+
+        // 13.power of num
+        // let num1=Number(prompt("num1"));
+        // let num2=Number(prompt("num2"));
+        // let res=1;
+        // for(let i=1;i<=num2;i++){
+        //     res*=num1
+        //  }
+        // alert(res);
+
+        //14.student result system
+        // let num1=Number(prompt("num1"));
+        // let num2=Number(prompt("num2"));
+        // let num3=Number(prompt("num3"));
+        // let tot=num1+num2+num3;
+        // let avg=tot/3;
+        // alert(avg);
+        // if(avg>=50){
+        //     alert("pass")
+        // }
+        // else{
+        //     alert("fail")
+        // }
+
+
+        // 15.currency  convertor
+        // let rupee=Number(prompt("enter rupee"));
+        // let rate=83;
+        // alert(rupee/rate);
+
+        //16.
+        // let num=Number(prompt("enter num"));
+        // let sum=0;
+        // while(num!=0){
+        //     sum+=(num%10);
+        //     num=Math.floor(num/10);
+        // }
+        // alert(sum);
+
+        //17. simple menu
+        // let a;
+        // do{
+        //     a=prompt("1 2 3");
+        //     if(a==1){
+        //         alert("login")
+        //     }
+        //     else if(a==2){
+        //         alert("stay")
+        //     }
+        // }while(a!=3);
+
+        //18.avg of n numbers
+        // let num=Number(prompt("enter a num"));
+        // let s=0;
+        // for(let i=1;i<=num;i++){
+        //     s+=i
+        // }
+        // alert(s/num);
+
+        // 19.check divisibility
+        // let num=Number(prompt("enter a num"));
+        // if(num%3==0 && a%5==0){
+        //     alert("divisible by 3");
+        // }
+        // else if(num%5==0){
+        //     alert("divisible by 5")
+        // }
+        // else{
+        //     alert("invalid")
+        // }
+
+        //20.login attempt
+        // let x=5;
+        // let name="shree";
+        // while(x!=0){
+        //     let password=prompt("enter password");
+        //     if(name===password){
+        //         alert("sucess");
+        //         break;
+        //     }
+        //     else{
+        //         alert("invalid");
+        //     }
+        //     a--;
+        // }
+        // if(a==0){
+        //     alert("locked");
+        // }
+
+
+
+
+        
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
