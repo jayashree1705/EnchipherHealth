@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2 -->
+    <!-- <button id="btn">
+        click me
+    </button> -->
+    <!-- 4. -->
+    <!-- <h1 id="count">
+        0
+     </h1> -->
+    <!-- 5. -->
+    <!-- <button onclick="cancelAlert()">
+            cancel alert
+      </button> -->
+    <!-- 6. -->
+    <!-- <button onclick="cancelMsg()">Cancel</button>
+    <p id="msg"></p> -->
+    <!-- 8. -->
+     <!-- <button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button> -->
+<!-- 9 -->
+ <!-- <ul id="lists">
+    <li>item 1</li>
+      <li>item 2</li>
+        <li>item 3</li>
+ </ul> -->
+ <!-- 10. -->
+  <!-- <p id="view"></p> -->
+   <!-- 11. -->
+    <!-- <div id="size"></div> -->
+     <!-- 12. -->
+      <!-- <div id="res">click</div>
+      <button id="topBtn" onclick="show()">Top</button> -->
+      <!-- 13. -->
+       <!-- <p id="msg">Loading...</p> -->
+        <!-- 14. --> 
+         <img src="https://wallpaperaccess.com/full/205622.jpg" alt="" width="50%" height="50%">
+         <img src="https://wallpaperaccess.com/full/205622.jpg" alt="" width="50%" height="50%">
+
+
+</body>
+<script>
+    //1.    
+    //    setTimeout((e)=>{
+    //     alert("hello after 3 sec")
+    //    },3000);
+    //2.
+    // btn.addEventListener("click",(e)=>{
+    //     setTimeout(()=>{
+    //         document.body.style.background="lightblue";
+    //     },3000);
+    // })
+    //3.
+    // setInterval((e)=>{
+    //     console.log(new Date().toLocaleTimeString());
+    // },1000);
+    //4.
+    // let count=0;
+    // setInterval((e)=>{
+    //     count++;
+    //     document.getElementById("count").innerText=count;
+    // },1000);
+    //5.
+    // let timer = setTimeout(() => {
+    //   alert("10 seconds passed!");
+    // }, 10000);
+
+    // function cancelAlert() {
+    //   clearTimeout(timer);
+    // }
+    //6.
+    // let m = setTimeout(() => {
+    //     document.getElementById("msg").innerText = "Hello!";
+    // }, 5000);
+
+    // function cancelMsg() {
+    //     clearTimeout(m);
+    // }
+    //7.
+//     let i = 1;
+// let interval = setInterval(() => {
+//   console.log(i);
+//   i++;
+//   if (i > 10) {
+//     clearInterval(interval);
+//   }
+// }, 1000)
+//8.
+// let intervalid;
+
+// function start() {
+//   intervalid = setInterval(() => {
+//     console.log("Running...");
+//   }, 1000);
+// }
+
+// function stop() {
+//   clearInterval(intervalid);
+// }
+//9.
+// document.getElementById("lists").addEventListener("click",(e)=>{
+//     if(e.target.tagName==="LI"){
+//         e.target.style.background="blue";
+//     }
+// })
+//10.
+// window.addEventListener("resize",()=>{
+//     if(window.innerWidth<600){
+//         document.getElementById("view").innerText="Mobile View"
+//     }else{
+//         document.getElementById("view").innerText="Desktop View"
+//     }
+// });
+//11.
+// window.addEventListener("resize", function () {
+//   document.getElementById("size").innerHTML =
+//  window.innerWidth  + window.innerHeight;
+// });
+//12.
+// function show(){
+//     res.innerText=window.outerWidth+window.outerHeight;
+// }
+//13.
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.getElementById("msg").innerText = "DOM Loaded!";
+// });
+//14.
+window.addEventListener("load", function () {
+  alert("Page fully loaded!");
+});
+
+
+
+</script>
+
+</html>
