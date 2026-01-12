@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            margin: 20% 35%;
+            text-align: center;
+            background-color: #ffffff;
+            font-size: 30px;
+            border-radius: 10px;
+            font-family: sans-serif;
+            width: 300px;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 7px;
+        }
+
+        .nav {
+            width: 250px;
+            height: 50px;
+            text-align: right;
+            font-size: 30px;
+            margin-top: 20px;
+            background-color: #f7f7f7;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .c1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav1 {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #ffd167;
+            border-radius: 7px;
+            border: goldenrod;
+            margin: 10px;
+        }
+
+        .nav2 {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #bcdffb;
+            border-radius: 7px;
+            border: #bcdffb;
+            margin: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body style="background-color: #04afff;">
+    <div class="top">
+        <div class="box">
+            <p><input type="text" value="8.3+1.7" class="nav" id="show"></p>
+        </div>
+        <div class="c1">
+            <button class="nav1">+</button>
+            <button class="nav1">-</button>
+            <button class="nav1">*</button>
+            <button class="nav1">/</button>
+        </div>
+        <div class="c1">
+            <!-- <input type="text" value="7" class="nav2">
+            <input type="text" value="8" class="nav2">
+            <input type="text" value="9" class="nav2">
+            <input type="text" value="4" class="nav2"> -->
+            <button class="nav2">7</button>
+            <button class="nav2">8</button>
+            <button class="nav2">9</button>
+            <button class="nav2">4</button>
+        </div>
+        <div class="c1">
+            <!-- <input type="text" value="5" class="nav2">
+            <input type="text" value="6" class="nav2">
+            <input type="text" value="1" class="nav2">
+            <input type="text" value="2" class="nav2"> -->
+            <button class="nav2">5</button>
+            <button class="nav2">6</button>
+            <button class="nav2">1</button>
+            <button class="nav2">2</button>
+        </div>
+        <div class="c1">
+            <!-- <input type="text" value="3" class="nav2">
+            <input type="text" value="0" class="nav2">
+            <input type="text" value="." class="nav2">
+            <input type="text" value="C" class="nav2" style="color: #ffffff; background-color: #f45c47;"> -->
+            <button class="nav2">3</button>
+            <button class="nav2">0</button>
+            <button class="nav2">.</button>
+            <button class="nav2" style="color: #ffffff; background-color: #f45c47;">C</button>
+        </div>
+        <div class="c1">
+            <button type="text" value="=" class="nav2"
+                style="background-color: #0cd7a0; color: #ffffff; width: 125px;">=</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    let show=document.getElementById("show");
+    let buttons=document.querySelectorAll("button");
+    let n1="";
+    let n2="";
+    let operator="";
+    buttons.forEach(element => {
+        element.addEventListener("click",()=>{
+            let value=element.innerText;
+            if(value==="C"){
+                show.value="";
+                n1="";
+                n2="";
+                operator="";
+            }
+            else if(value==="+"||value==="-"||value==="*"|| value==="/"){
+                operator=value;
+                show.value +=value;
+            }
+            else if(value==="="){
+                let a=Number(n1);
+                let b=Number(n2);
+                let result= 0;
+                if(operator==="+"){
+                    result=a+b;
+                }else if(operator==="-"){
+                    result=a-b;
+                }else if(operator==="*"){
+                    result=a*b;
+            }
+            else if(operator==="/"){
+                    result=a/b;
+        }
+        show.value=result;
+    }
+        else{
+            if(operator===""){
+              n1 +=value;
+            }else{
+                n2+= value;
+            }
+            show.value+=value;
+        }
+     });
+    });
+</script>
+
+</html>
