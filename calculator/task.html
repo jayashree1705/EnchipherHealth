@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top{
+            margin: 20% 35%;
+            text-align: center;
+            background-color: #ffffff;
+            font-size: 30px;
+            border-radius: 10px;
+            font-family:sans-serif;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            margin-top: -35px;
+            margin-left: 20px;
+            margin-right: 30px;
+        }
+        .box1{ 
+            width: 210px;
+            height: 30px;
+            font-size: 12px;
+            border-color: #1f6ef5;
+            border-radius: 7px;
+        }
+        .box2{
+            background-color: #1f6ef5;
+            color: white;
+            border-color: #1f6ef5;
+            border-radius: 7px;
+            width: 80px;
+            height:25px;
+        }
+        .s1{
+            display: flex;
+            justify-content: space-between;
+            font-size: medium;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 30px;
+            border-bottom: 1px  dotted gray;
+            font-weight: lighter;
+            color: gray;
+        }
+        .s2{
+            display: flex;
+            justify-content: space-between;
+            font-size: medium;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 30px;
+            border-bottom: 1px  dotted gray;
+        }
+        .s3{
+            display: flex;
+            justify-content: space-between;
+            font-size: medium;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 30px;
+            font-weight: lighter;
+            color: gray;
+        }
+        .s1 p{
+            margin-top: 5px;
+        }
+        .s2 p{
+            margin-top: 5px;
+        }
+        .s3 p{
+           margin-top: 5px; 
+        }
+        .box3{
+            background-color: #ef4333;
+            color: white;
+            border-color:#ef4333;
+            border-radius: 3px;
+            width: 80px;
+            height:25px;
+
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: #e9f4f9;">
+    <div class="top">
+        <p style="padding: 20px; color: #1a72e0; font-weight: 600;">Task Manager</p>
+        <div class="box">
+            <label>
+                <input type="text" value="What needs to be done?" class="box1">
+            </label>
+            <div>
+                <label>
+                <button class="box2">Add task</button>
+            </label>
+            </div>
+        </div>
+        <div class="sec1">
+          <div class="s1">
+            <p style="padding-left:13px;"><i class="fa-solid fa-check" style="color: #26ba53;"></i></p>
+            <p style="padding-left:13px;"><del>TaskA</del></p>
+            <input type="submit" value="Remove" class="box3">
+        </div>
+        <div class="s2">
+            <p style="padding-left:13px;"><i class="fa-solid fa-check" style="color: #26ba53;"></i></p>
+            <p style="padding-left:13px;"><b>Task B</b></p>
+            <input type="submit" value="Remove" class="box3">
+        </div>
+        <div class="s3">
+            <p style="border: 2px solid blue;width: 15%;height: 30px; margin-top: -10px;padding-top: 10px; border-radius: 5px;"><i class="fa-solid fa-check" style="color: #26ba53;"></i></p>
+            <p><del>Task C</del></p>
+            <input type="submit" value="Remove" class="box3">
+        </div>
+        </div>
+    </div>
+</body>
+<script>
+const input = document.querySelector(".box1");
+const addBtn = document.querySelector(".box2");
+const list = document.querySelector(".sec1");
+addBtn.addEventListener("click", () => {
+    const text = input.value.trim();
+
+    if (text === "" || text === "What needs to be done?") {
+        alert("Enter task");
+        return;
+    }
+
+    const taskDiv = document.createElement("div");
+    taskDiv.className = "s2";
+
+    taskDiv.innerHTML = `
+        <p style="padding-left:13px; cursor:pointer" class="check">
+            <i class="fa-solid fa-check" style="color:#26ba53;"></i>
+        </p>
+        <p class="taskText">${text}</p>
+        <input type="submit" value="Remove" class="box3">
+    `;
+
+    list.appendChild(taskDiv);
+    input.value = "";
+});
+list.addEventListener("click", (e) => {
+    if (e.target.classList.contains("box3")) {
+        e.target.parentElement.remove();
+    }
+
+    if (e.target.closest(".check")) {
+        const text = e.target.closest(".s2").querySelector(".taskText");
+        text.style.textDecoration =
+            text.style.textDecoration === "line-through"
+            ? "none"
+            : "line-through";
+        text.style.color =
+            text.style.color === "gray"
+            ? "black"
+            : "gray";
+    }
+});
+</script>
+</html>
