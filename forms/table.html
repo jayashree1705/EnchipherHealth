@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .edit-btn, .delete-btn {
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            background-color: #ffa500;
+            color: white;
+        }
+
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Users</h1>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Gender</th>
+                    <th>Interests</th>
+                    <th>Country</th>
+                    <th>Bio</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <a href="regform.html">Add New User</a>
+    </div>
+<script>
+let tableBody = document.querySelector("#userTable tbody");
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+function showUsers(){
+    tableBody.innerHTML = "";
+    users.forEach((user,index)=>{
+        let row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${user.name}</td>
+        <td>${user.email}</td>
+        <td>${user.password}</td>
+        <td>${user.gender}</td>
+        <td>${user.interests.join(", ")}</td>
+        <td>${user.country}</td>
+        <td>${user.bio}</td>
+        <td>
+        <button class="edit-btn" onclick="editUser(${index})">Edit</button>
+        <button class="delete-btn" onclick="deleteUser(${index})">Delete</button>
+        </td>`;
+        tableBody.appendChild(row);
+    });
+}
+
+function deleteUser(index){
+    users.splice(index,1);
+    localStorage.setItem("users",JSON.stringify(users));
+    showUsers();
+}
+
+function editUser(index){
+    localStorage.setItem("editIndex", index);
+    window.location.href = "regform.html";
+}
+
+showUsers();
+</script>
+</body>
+</html>
+
