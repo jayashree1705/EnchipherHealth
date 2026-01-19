@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .radio,
+        .checkbox {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .radio label,
+        .checkbox label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #3d9440;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <h1>REGISTRATION FORM</h1>
+        <form id="userform">
+            <label for="name">Name</label>
+            <input type="name" id="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+            <label for="">Gender</label>
+            <div class="radio">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> Female</label>
+                <label><input type="radio" name="gender" value="Other" required> Other</label>
+            </div>
+
+            <label>Interests</label>
+            <div class="checkbox">
+                <label><input type="checkbox" value="IT" name="interests"> IT</label>
+                <label><input type="checkbox" value="Business" name="interests"> Business</label>
+                <label><input type="checkbox" value="BPO" name="interests"> BPO</label>
+            </div>
+
+            <label for="country">Country</label>
+            <select name="" id="country" required>
+                <option value="">Select Country</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <option value="India">India</option>
+            </select>
+            <label for="bio">Bio:</label>
+
+            <textarea id="bio" rows="4"></textarea>
+            <span class="error" id="bioError"></span>
+
+            <button type="submit">Submit</button>
+
+        </form>
+        <a href="table.html"></a>
+    </div>
+</body>
+<script>
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    let editIndex = localStorage.getItem("editIndex");
+
+    if (editIndex !== null) {
+        let user = users[editIndex];
+        document.getElementById("name").value = user.name;
+        document.getElementById("email").value = user.email;
+        document.getElementById("password").value = user.password;
+        document.getElementById("country").value = user.country;
+        document.getElementById("bio").value = user.bio;
+        document.querySelector(`input[name="gender"][value="${user.gender}"]`).checked = true;
+        user.interests.forEach(i => {
+            document.querySelector(`input[name="interests"][value="${i}"]`).checked = true;
+        });
+    }
+
+    document.getElementById("userform").addEventListener("submit", function (e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let country = document.getElementById("country").value;
+        let bio = document.getElementById("bio").value;
+        let gender = document.querySelector('input[name="gender"]:checked');
+        let interests = document.querySelectorAll('input[name="interests"]:checked');
+        let nameRegex = /^[A-Za-z ]{3,}$/;
+        if (!nameRegex.test(name)) {
+            alert("Name must contain at least 3 letters and no numbers or symbols");
+            return;
+        }
+        let passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*]).{6,}$/;
+        if (!passwordRegex.test(password)) {
+            alert("Password must be at least 6 characters long, include 1 number and 1 special character (!@#$%^&*)");
+            return;
+        }
+        if (!email || !country || !gender) {
+            alert("Fill all required fields");
+            return;
+        }
+        let interestList = [];
+        interests.forEach(i => interestList.push(i.value));
+
+        let userData = { name, email, password, gender: gender.value, interests: interestList, country, bio };
+
+        if (editIndex !== null) {
+            users[editIndex] = userData;
+            localStorage.removeItem("editIndex");
+        } else {
+            users.push(userData);
+        }
+
+        localStorage.setItem("users", JSON.stringify(users));
+        window.location.href = "table.html";
+    });
+</script>
+
+</html>
