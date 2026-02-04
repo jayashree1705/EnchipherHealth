@@ -1,0 +1,113 @@
+.login-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.login-box {
+  width: 400px;
+  background-color: #121212;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.loginbtn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.google {
+  background: white;
+  color: black;
+}
+
+.facebook {
+  background: #1877f2;
+  color: white;
+}
+
+.apple {
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.green {
+  background: #1db954;
+  color: black;
+}
+
+.divider {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  color: #b3b3b3;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #333;
+}
+
+.divider span {
+  margin: 0 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #181818;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 30px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1db954;
+}
+
+.forgot {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.signup {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.signup span {
+  color: #1db954;
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+.sidebar {
+  width: 250px;
+  background: #121212;
+  color: white;
+  padding: 20px;
+  height: 100vh;       
+  flex-shrink: 0;
+  overflow-y: auto; 
+  box-sizing: border-box;
+}
+
+.sidebar h4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  background: #242424;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 30px 0 15px 0;
+}
+
+.box button {
+  margin-top: 10px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+}

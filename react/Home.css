@@ -1,0 +1,23 @@
+.home {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  overflow-y: auto; 
+}
+.home::-webkit-scrollbar {
+  width: 8px;
+}
+.home::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.artist-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 0px; 
+  margin-top: 20px;
+}
+
+
+

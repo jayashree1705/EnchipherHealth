@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+}
+
+.app {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background: #000;
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.box {
+  background: #181818;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.box button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.navbar input {
+  width: 300px;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+}
+
+.nav-right button {
+  margin-left: 10px;
+}
+
+.login {
+  background: white;
+  color: black;
+  border-radius: 20px;
+}
+
+.artists .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #181818;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.play {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #1db954;
+  border-radius: 50%;
+}

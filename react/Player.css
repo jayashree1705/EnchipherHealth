@@ -1,0 +1,68 @@
+.player-full {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  background: linear-gradient(#1e1e1e, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 120px;
+  color: white;
+  overflow-y: auto;
+}
+
+
+.player-cover {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 24px;
+}
+
+
+.player-title {
+  font-size: 30px;
+  margin: 0px;
+}
+
+.player-artist {
+  font-size: 16px;
+  color: #b3b3b3;
+  margin-bottom: 5px;
+}
+
+audio {
+  width: 520px;
+  height: 550px;
+}
+.player-mini {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: #181818;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.player-mini img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+.mini-text h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.mini-text p {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}

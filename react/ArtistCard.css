@@ -1,0 +1,59 @@
+.artist-card {
+  text-align: center;
+  width: 160px;
+  cursor: pointer;
+  color: white;
+  margin-left: 80px;
+  border-radius: 20px;
+}
+.img-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.play-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #1ed760;
+  color: black;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateX(12px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+.artist-card:hover .play-btn {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.artist-card img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 30px;
+}
+
+.artist-card p {
+  color: #aaa;
+  font-size: 16px;
+}
+.artist-card :hover{
+  color: rgb(33, 33, 33);
+}
